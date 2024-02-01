@@ -10,9 +10,6 @@ import { FourthComponentComponent } from '../fourth-component/fourth-component.c
   styleUrl: './second-component.component.css'
 })
 export class SecondComponentComponent {
-  Nome=["Nome1", "Nome2"]
-  Nome1="Nero che pensa"
-  Nome2="Personaggio Cartone Animato"
-  Descrizione1="Game award"
-  Descrizione2="ragazzo bello (io)"
+  Nome=["Nero che pensa", "Personaggio Cartone Animato"]
+  Descrizione=["Game award", "ragazzo bello (io)"]
 }
