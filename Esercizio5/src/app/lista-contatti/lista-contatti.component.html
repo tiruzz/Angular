@@ -1,5 +1,9 @@
-<div *ngFor="let element of persone">
+<div *ngFor="let element of persone" [ngStyle]>
+    <!--<img [src]="persone.immagine">-->
+    <img class="foto" src="https://www.fotorapida.com/wp-content/uploads/2018/02/giusta-e1582735572290.jpg" alt="">
     <p>Nome: <strong>{{element.nome}}</strong> <strong>{{element.cognome}}</strong></p>
-    <p>Telefono: <i>{{element.numero}}</i></p>
-    
+    <p>Età: <i>{{element.eta}}</i></p>
+    <p>Telefono: <i>{{element.nTelefono}}</i></p>
+    <p>Stato: <i>{{element.stato}}</i></p>
+    <p>Colore preferito: <i>{{element.colore}}</i></p><br>
 </div>
