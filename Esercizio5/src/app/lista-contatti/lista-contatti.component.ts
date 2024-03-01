@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 import { shareReplay } from 'rxjs';
 
 @Component({
-  selector: 'lista-contatti',
+  selector: 'lista-contatti', 
   standalone: true,
   imports: [CommonModule],
   templateUrl: './lista-contatti.component.html',
