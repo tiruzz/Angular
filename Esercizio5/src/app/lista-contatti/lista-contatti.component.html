@@ -1,9 +1,19 @@
-<div *ngFor="let element of persone" [ngStyle]>
-    <!--<img [src]="persone.immagine">-->
-    <img class="foto" src="https://www.fotorapida.com/wp-content/uploads/2018/02/giusta-e1582735572290.jpg" alt="">
+<div *ngFor="let element of persone; let i = index" [ngStyle]="{ 'background-color': sfondo[i], 'font-size': 30}">
+
+    <img class="foto" [src]="element.immagine">
     <p>Nome: <strong>{{element.nome}}</strong> <strong>{{element.cognome}}</strong></p>
     <p>Età: <i>{{element.eta}}</i></p>
     <p>Telefono: <i>{{element.nTelefono}}</i></p>
-    <p>Stato: <i>{{element.stato}}</i></p>
-    <p>Colore preferito: <i>{{element.colore}}</i></p><br>
+
+   <div>
+        <!--<p>Stato: <i>{{element.stato}}</i></p>--> 
+        <ng-template *ngIf= "element.stato; then statoOnline else statoOffline"></ng-template>
+        <ng-template #statoOnline>
+            <span style="color: green;">●</span>
+        </ng-template>
+        <ng-template #statoOffline>
+            <span style="color: red;">●</span>
+        </ng-template>
+        <p>Colore preferito: <i>{{element.colore}}</i></p><br>
+    </div>
 </div>
