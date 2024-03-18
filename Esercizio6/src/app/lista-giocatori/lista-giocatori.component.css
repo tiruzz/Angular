@@ -1,19 +1,16 @@
-body{
+.sfondo{
     background-image: url(sfondo\ cs.jpeg);
-    background-color: black;
 }
 .container1 {
     display: flex; /* Rende tutto responsive, pulito*/
     flex-direction: row; /* Carte in orizzontale*/
     justify-content: center;
-    padding: 20px;
 }
 
 .container2 {
     display: flex; /* Rende tutto responsive, pulito*/
     flex-direction: row; /* Carte in verticale*/
     justify-content: center;    
-    padding: 20px;
 }
 
 .card-body {
@@ -33,7 +30,6 @@ body{
 }
 
 .vs img{
-    
     width: 200px;
 }
 
