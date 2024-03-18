@@ -1,17 +1,20 @@
+<link href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css" rel="stylesheet">
 <div class="sfondo">
     <div class="logo">
         <img src="https://www.freepnglogos.com/uploads/counter-strike-png-logo/counter-strike-global-offensive-logo-png-0.png" alt="Logo">
-    </div><br><br><br><br>
+    </div><br>
+    <div class="descrizione">
+        <p class="testo" style="color: white;">Counter-Strike: Global Offensive è uno sparatutto multigiocatore basato sul completamento degli obiettivi. La modalità più famosa e giocata è la modalità competitiva. I giocatori in questa modalità vengono schierati come terroristi o come anti-terroristi. La squadra vincitrice sarà quella che, per prima, raggiunge 16 round vinti</p><br><br><br><br>
+    </div>
     <div class="rettangolo">
         <div class="container1">
             <div *ngFor="let element of persone.slice(0, 5); let i = index">
                 <img class="foto" [src]="element.immagine">
-                <div class="card-body" [ngStyle]="{'background-color': 'grey', 'font-size': 50,}">
+                <div class="card-body" [ngClass]="{'arancione': element.ruolo=='AWPer', 'giallo': element.ruolo=='Support', 'blu': element.ruolo=='Coach'}">
                     <p class="card-text">Nickname: {{element.nUtente}}</p>
                     <p class="card-text">Età: {{element.eta}}</p>
                     <p class="card-text">Nazionalità: {{element.nazionalita}}
-                    <span [ngSwitch]="element.nazionalita">
-                        <!--<a class="ui basic label">Basic</a>-->
+                    <span class="ui left pointing label" [ngSwitch]="element.nazionalita">
                         <ng-container *ngSwitchCase="'Ucraino'">🇺🇦</ng-container>
                         <ng-container *ngSwitchCase="'Francese'">🇫🇷</ng-container>
                         <ng-container *ngSwitchCase="'Tedesco'">🇩🇪</ng-container>
@@ -40,24 +43,24 @@
         <div class="container2">
             <div *ngFor="let element of persone.slice(5); let i = index"><br>
                 <img class="foto" [src]="element.immagine">
-                <div class="card-body" [ngStyle]="{'background-color': 'grey', 'font-size': 50,}">
+                <div class="card-body" [ngClass]="{'arancione': element.ruolo=='AWPer', 'giallo': element.ruolo=='Support', 'blu': element.ruolo=='Coach'}">
                     <p class="card-text">Nickname: {{element.nUtente}}</p>
                     <p class="card-text">Età: {{element.eta}}</p>
                     <p class="card-text">Nazionalità: {{element.nazionalita}}
-                    <span [ngSwitch]="element.nazionalita">
-                        <ng-container *ngSwitchCase="'Ucraino'">🇺🇦</ng-container>
-                        <ng-container *ngSwitchCase="'Francese'">🇫🇷</ng-container>
-                        <ng-container *ngSwitchCase="'Tedesco'">🇩🇪</ng-container>
-                        <ng-container *ngSwitchCase="'Svedese'">🇸🇪</ng-container>
-                        <ng-container *ngSwitchCase="'Finlandese'">🇫🇮</ng-container>
-                        <ng-container *ngSwitchCase="'Slovacco'">🇸🇰</ng-container>
-                        <ng-container *ngSwitchCase="'Australiano'">🇦🇺</ng-container>
-                        <ng-container *ngSwitchDefault>❓</ng-container>
-                    </span></p>
+                        <span class="ui left pointing label" [ngSwitch]="element.nazionalita">
+                            <ng-container *ngSwitchCase="'Ucraino'">🇺🇦</ng-container>
+                            <ng-container *ngSwitchCase="'Francese'">🇫🇷</ng-container>
+                            <ng-container *ngSwitchCase="'Tedesco'">🇩🇪</ng-container>
+                            <ng-container *ngSwitchCase="'Svedese'">🇸🇪</ng-container>
+                            <ng-container *ngSwitchCase="'Finlandese'">🇫🇮</ng-container>
+                            <ng-container *ngSwitchCase="'Slovacco'">🇸🇰</ng-container>
+                            <ng-container *ngSwitchCase="'Australiano'">🇦🇺</ng-container>
+                            <ng-container *ngSwitchDefault>❓</ng-container>
+                        </span></p>
                     <p class="card-text">Ruolo: {{element.ruolo}}</p>
                     <button class="bottone" (click)="openExternalPage(element.pagina)">Apri pagina esterna</button>
                 </div>
             </div>
         </div>
     </div>
-</div>
+</div><br><br><br>

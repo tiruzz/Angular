@@ -7,6 +7,23 @@
     justify-content: center;
 }
 
+.descrzione{
+    display: flex; /* Rende tutto responsive, pulito*/
+    flex-direction: row; /* Carte in verticale*/
+    justify-content: center;
+}
+
+.arancione{
+    background-color: #D74E09;
+}
+
+.blu{
+    background-color: #124E78;
+}
+.giallo{
+    background: rgb(214, 161, 81);
+}
+
 .container2 {
     display: flex; /* Rende tutto responsive, pulito*/
     flex-direction: row; /* Carte in verticale*/
@@ -49,8 +66,9 @@
     justify-content: center;
 }
 
-.rettangolo{
-    
+.card-text{
+    font-weight: bolder;
+    font-size: 17px;
 }
 
 .navi img{
@@ -71,3 +89,10 @@
     flex-direction: row; /* Carte in verticale*/
     justify-content: center;
 }
+
+.testo{
+    display: flex;
+    justify-content: center;
+    font-size: large;
+    padding: 50px
+;}
