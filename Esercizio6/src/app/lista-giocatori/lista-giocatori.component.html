@@ -1,5 +1,30 @@
 <body>
-    <div>    
-        <img src="/Esercizio6/src/app/lista-giocatori/logo cs.png" alt="Logo">
+    <div class="logo">
+        <img src="https://www.freepnglogos.com/uploads/counter-strike-png-logo/counter-strike-global-offensive-logo-png-0.png" alt="Logo">
+    </div>
+    <div class="container1">
+        <div *ngFor="let element of persone.slice(0, 5); let i = index">
+            <img class="foto" [src]="element.immagine">
+            <div class="card-body" [ngStyle]="{'background-color': 'grey', 'font-size': 30}">
+                <p class="card-text">Nickname: <strong>{{element.nUtente}}</strong></p>
+                <p class="card-text">Età: <i>{{element.eta}}</i></p>
+                <p class="card-text">Nazionalità: <i>{{element.nazionalita}}</i></p>
+                <p class="card-text">Ruolo: <i>{{element.ruolo}}</i></p>
+            </div>
+        </div>
+    </div><br>
+    <div class="vs">
+        <img src="https://static.vecteezy.com/system/resources/previews/024/045/068/original/white-versus-vs-3d-letters-free-png.png" alt="">
+    </div>
+    <div class="container1">
+        <div *ngFor="let element of persone.slice(5); let i = index">
+            <img class="foto" [src]="element.immagine">
+            <div class="card-body" [ngStyle]="{'background-color': 'grey', 'font-size': 30}">
+                <p class="card-text">Nickname: <strong>{{element.nUtente}}</strong></p>
+                <p class="card-text">Età: <i>{{element.eta}}</i></p>
+                <p class="card-text">Nazionalità: <i>{{element.nazionalita}}</i></p>
+                <p class="card-text">Ruolo: <i>{{element.ruolo}}</i></p>
+            </div>
+        </div>
     </div>
 </body>

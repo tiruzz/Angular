@@ -2,3 +2,42 @@ body{
     background-image: url(sfondo\ cs.jpeg);
     background-color: black;
 }
+.container1 {
+    display: flex; /* Rende tutto responsive, pulito*/
+    flex-direction: row; /* Carte in orizzontale*/
+    justify-content: center;
+    padding: 20px;
+}
+
+.container2 {
+    display: flex; /* Rende tutto responsive, pulito*/
+    flex-direction: row; /* Carte in verticale*/
+    justify-content: center;    
+    padding: 20px;
+}
+
+.card-body {
+    padding: 20px;
+    border-radius: 10px; /* Angoli smussati */
+    margin-right: 20px; /* Aggiungi un margine di 2 pixel a destra */
+}
+
+.foto{
+    border-radius: 15px; /* Angoli smussati */
+    width: 200px;
+    margin-right: 20px; /* Aggiungi un margine di 2 pixel a destra */
+}
+.logo{
+    display: flex;
+    justify-content: center;
+}
+
+.vs img{
+    
+    width: 200px;
+}
+
+.vs{
+    display: flex;
+    justify-content: center;
+}
