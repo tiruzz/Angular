@@ -17,9 +17,9 @@ export class ListaGiocatoriComponent {
     {immagine: "https://sickodds.com/wp-content/uploads/2022/09/FNUyeGfXsAEWnpv.jpg", nUtente: "Aleksib", eta: "26", nazionalita: "Finlandese", ruolo: "Game Leader", pagina: "https://liquipedia.net/counterstrike/Aleksib"},
     {immagine: "https://res.cloudinary.com/pley-gg/image/upload/c_fill,w_900/v1/players/KRIMZ_yafej0", nUtente: "KRIMZ", eta: "29", nazionalita: "Svedese", ruolo: "Rifler", pagina: "https://liquipedia.net/counterstrike/KRIMZ"},
     {immagine: "https://res.cloudinary.com/pley-gg/image/upload/c_fill,w_900/v1/players/afro_HEET_xvx5be", nUtente: "Afro", eta: "24", nazionalita: "Francese", ruolo: "AWper", pagina: "https://liquipedia.net/counterstrike/Afro"},
-    {immagine: "https://res.cloudinary.com/pley-gg/image/upload/c_fill,w_900/v1/players/Copyright_-_Helena-Kristiansson_-_bodyy_1_m9vmcb", nUtente: "Bodyy", eta: "27", nazionalita: "Francese", ruolo: "Leader support", pagina: "https://liquipedia.net/counterstrike/Bodyy"},
+    {immagine: "https://res.cloudinary.com/pley-gg/image/upload/c_fill,w_900/v1/players/Copyright_-_Helena-Kristiansson_-_bodyy_1_m9vmcb", nUtente: "Bodyy", eta: "27", nazionalita: "Francese", ruolo: "Support", pagina: "https://liquipedia.net/counterstrike/Bodyy"},
     {immagine: "https://api.yzone.sk/api/file/cc9ef2a9-7fc8-4ebe-8f06-2de0e6a72053.jpg", nUtente: "Matys", eta: "21", nazionalita: "Slovacco", ruolo: "Rifler", pagina: "https://liquipedia.net/counterstrike/Matys"},
-    {immagine: "https://img-cdn.hltv.org/gallerypicture/98RUBn0BltsxiKtJrEiXZG.jpg?auto=compress&ixlib=java-2.1.0&m=%2Fm.png&mw=53&mx=10&my=237&q=75&w=400&s=34ba78bf6c92305481390685f7db3586", nUtente: "Kyuubii", eta: "18", nazionalita: "Tedesco", ruolo: "Rifler", pagina: "https://liquipedia.net/counterstrike/Kyuubii"},
+    {immagine: "https://res.cloudinary.com/pley-gg/image/upload/c_fill,w_900/v1/players/dexter_c4oyy5", nUtente: " Dexter", eta: "29", nazionalita: "Australiano", ruolo: "Entry Fragger", pagina: "https://liquipedia.net/counterstrike/Kyuubii"},
   ];
   openExternalPage(url: any) {
     location.href = url;

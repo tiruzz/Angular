@@ -19,10 +19,21 @@
     margin-right: 20px; /* Aggiungi un margine di 2 pixel a destra */
 }
 
+.bottone{
+    display: flex;
+    justify-content: center;    
+    background-color: black; /* Cambia il colore come desideri */
+    color: white; /* Cambia il colore del testo, se necessario */
+    border: none; /* Rimuove i bordi se necessario */
+    padding: 10px 20px; /* Aggiunge spazio interno al bottone */
+    border-radius: 5px; /* Aggiunge un bordo arrotondato al bottone */
+}
+
 .foto{
     border-radius: 15px; /* Angoli smussati */
-    width: 200px;
+    width: 310px;
     margin-right: 20px; /* Aggiungi un margine di 2 pixel a destra */
+    margin-bottom: 5px;
 }
 .logo{
     display: flex;
@@ -35,5 +46,28 @@
 
 .vs{
     display: flex;
+    justify-content: center;
+}
+
+.rettangolo{
+    
+}
+
+.navi img{
+    width: 200px;
+    margin-right: 70px;
+    margin-top: 20px;
+}
+
+.fnatic img{
+    width: 200px;
+    margin-left: 70px;
+    margin-top: 40px;
+
+}
+
+.squadre{
+    display: flex; /* Rende tutto responsive, pulito*/
+    flex-direction: row; /* Carte in verticale*/
     justify-content: center;
 }

@@ -2,30 +2,61 @@
     <div class="logo">
         <img src="https://www.freepnglogos.com/uploads/counter-strike-png-logo/counter-strike-global-offensive-logo-png-0.png" alt="Logo">
     </div><br><br><br><br>
-    <div class="container1">
-        <div *ngFor="let element of persone.slice(0, 5); let i = index">
-            <img class="foto" [src]="element.immagine">
-            <div class="card-body" [ngStyle]="{'background-color': 'grey', 'font-size': 30,}">
-                <p class="card-text">Nickname: <strong>{{element.nUtente}}</strong></p>
-                <p class="card-text">Età: <i>{{element.eta}}</i></p>
-                <p class="card-text">Nazionalità: <i>{{element.nazionalita}}</i> </p>
-                <p class="card-text">Ruolo: <i>{{element.ruolo}}</i></p>
-                <button (click)="openExternalPage(element.pagina)">Apri pagina esterna</button>
+    <div class="rettangolo">
+        <div class="container1">
+            <div *ngFor="let element of persone.slice(0, 5); let i = index">
+                <img class="foto" [src]="element.immagine">
+                <div class="card-body" [ngStyle]="{'background-color': 'grey', 'font-size': 50,}">
+                    <p class="card-text">Nickname: {{element.nUtente}}</p>
+                    <p class="card-text">Età: {{element.eta}}</p>
+                    <p class="card-text">Nazionalità: {{element.nazionalita}}
+                    <span [ngSwitch]="element.nazionalita">
+                        <!--<a class="ui basic label">Basic</a>-->
+                        <ng-container *ngSwitchCase="'Ucraino'">🇺🇦</ng-container>
+                        <ng-container *ngSwitchCase="'Francese'">🇫🇷</ng-container>
+                        <ng-container *ngSwitchCase="'Tedesco'">🇩🇪</ng-container>
+                        <ng-container *ngSwitchCase="'Svedese'">🇸🇪</ng-container>
+                        <ng-container *ngSwitchCase="'Finlandese'">🇫🇮</ng-container>
+                        <ng-container *ngSwitchCase="'Slovacco'">🇸🇰</ng-container>
+                        <ng-container *ngSwitchCase="'Australiano'">🇦🇺</ng-container>
+                        <ng-container *ngSwitchDefault>❓</ng-container>
+                    </span></p>
+                    <p class="card-text">Ruolo: {{element.ruolo}}</p>
+                    <button class="bottone" (click)="openExternalPage(element.pagina)">Apri pagina esterna</button>
+                </div>
             </div>
-        </div>
-    </div><br>
-    <div class="vs">
-        <img src="https://static.vecteezy.com/system/resources/previews/024/045/068/original/white-versus-vs-3d-letters-free-png.png" alt="">
-    </div>
-    <div class="container2">
-        <div *ngFor="let element of persone.slice(5); let i = index"><br>
-            <img class="foto" [src]="element.immagine">
-            <div class="card-body" [ngStyle]="{'background-color': 'grey', 'font-size': 30}">
-                <p class="card-text">Nickname: <strong>{{element.nUtente}}</strong></p>
-                <p class="card-text">Età: <i>{{element.eta}}</i></p>
-                <p class="card-text">Nazionalità: <i>{{element.nazionalita}}</i></p>
-                <p class="card-text">Ruolo: <i>{{element.ruolo}}</i></p>
-                <button (click)="openExternalPage(element.pagina)">Apri pagina esterna</button>
+        </div><br>
+        <div class="squadre">
+            <div class="navi">
+                <img src="https://upload.wikimedia.org/wikipedia/en/thumb/a/ac/NaVi_logo.svg/1200px-NaVi_logo.svg.png" alt="">
+            </div>
+            <div class="vs">
+                <img src="https://static.vecteezy.com/system/resources/previews/024/045/068/original/white-versus-vs-3d-letters-free-png.png" alt="">
+            </div>
+            <div class="fnatic">
+                <img src="https://upload.wikimedia.org/wikipedia/en/thumb/4/43/Esports_organization_Fnatic_logo.svg/1200px-Esports_organization_Fnatic_logo.svg.png" alt="">
+            </div>
+        </div><br><br>
+        <div class="container2">
+            <div *ngFor="let element of persone.slice(5); let i = index"><br>
+                <img class="foto" [src]="element.immagine">
+                <div class="card-body" [ngStyle]="{'background-color': 'grey', 'font-size': 50,}">
+                    <p class="card-text">Nickname: {{element.nUtente}}</p>
+                    <p class="card-text">Età: {{element.eta}}</p>
+                    <p class="card-text">Nazionalità: {{element.nazionalita}}
+                    <span [ngSwitch]="element.nazionalita">
+                        <ng-container *ngSwitchCase="'Ucraino'">🇺🇦</ng-container>
+                        <ng-container *ngSwitchCase="'Francese'">🇫🇷</ng-container>
+                        <ng-container *ngSwitchCase="'Tedesco'">🇩🇪</ng-container>
+                        <ng-container *ngSwitchCase="'Svedese'">🇸🇪</ng-container>
+                        <ng-container *ngSwitchCase="'Finlandese'">🇫🇮</ng-container>
+                        <ng-container *ngSwitchCase="'Slovacco'">🇸🇰</ng-container>
+                        <ng-container *ngSwitchCase="'Australiano'">🇦🇺</ng-container>
+                        <ng-container *ngSwitchDefault>❓</ng-container>
+                    </span></p>
+                    <p class="card-text">Ruolo: {{element.ruolo}}</p>
+                    <button class="bottone" (click)="openExternalPage(element.pagina)">Apri pagina esterna</button>
+                </div>
             </div>
         </div>
     </div>
