@@ -8,8 +8,9 @@
             <div class="card-body" [ngStyle]="{'background-color': 'grey', 'font-size': 30}">
                 <p class="card-text">Nickname: <strong>{{element.nUtente}}</strong></p>
                 <p class="card-text">Età: <i>{{element.eta}}</i></p>
-                <p class="card-text">Nazionalità: <i>{{element.nazionalita}}</i></p>
+                <p class="card-text">Nazionalità: <i>{{element.nazionalita}}</i> </p>
                 <p class="card-text">Ruolo: <i>{{element.ruolo}}</i></p>
+                <button (click)="openExternalPage(element.pagina)">Apri pagina esterna</button>
             </div>
         </div>
     </div><br>
