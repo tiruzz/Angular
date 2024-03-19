@@ -8,13 +8,13 @@
 }
 
 .descrizione{
-    margin-right: 30px;
+    margin-right: 85px;
     border-radius: 30px;
-    margin-left: 30px;
-    font-size: 20px;
+    margin-left: 85px;
+    font-size: 17px;
     font-weight: bold;
     text-align: center;
-    padding: 20px;
+    padding: 15px;
     background-color: rgba(255, 255, 255, 0.673);
 }
 
@@ -44,16 +44,16 @@
 .bottone{
     display: flex;
     justify-content: center;    
-    background-color: black; /* Cambia il colore come desideri */
-    color: white; /* Cambia il colore del testo, se necessario */
-    border: none; /* Rimuove i bordi se necessario */
-    padding: 10px 20px; /* Aggiunge spazio interno al bottone */
-    border-radius: 5px; /* Aggiunge un bordo arrotondato al bottone */
+    background-color: black; 
+    color: white;
+    border: none;
+    padding: 10px 20px; 
+    border-radius: 10px;
 }
 
 .foto{
     border-radius: 15px; /* Angoli smussati */
-    width: 310px;
+    width: 250px;
     margin-right: 20px; /* Aggiungi un margine di 2 pixel a destra */
     margin-bottom: 5px;
 }
@@ -91,7 +91,7 @@
 
 .squadre{
     display: flex; /* Rende tutto responsive, pulito*/
-    flex-direction: row; /* Carte in verticale*/
+    flex-direction: row; /* Squadre in verticale*/
     justify-content: center;
 }
 
