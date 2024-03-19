@@ -7,10 +7,15 @@
     justify-content: center;
 }
 
-.descrzione{
-    display: flex; /* Rende tutto responsive, pulito*/
-    flex-direction: row; /* Carte in verticale*/
-    justify-content: center;
+.descrizione{
+    margin-right: 30px;
+    border-radius: 30px;
+    margin-left: 30px;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.673);
 }
 
 .arancione{
@@ -80,7 +85,7 @@
 .fnatic img{
     width: 200px;
     margin-left: 70px;
-    margin-top: 40px;
+    margin-top: 45px;
 
 }
 
@@ -94,5 +99,10 @@
     display: flex;
     justify-content: center;
     font-size: large;
-    padding: 50px
-;}
+    padding: 50px;
+}
+
+.ui.label {
+    background-color:bisque;
+    font-size: 22px;
+}

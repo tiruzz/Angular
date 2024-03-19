@@ -19,7 +19,7 @@ export class ListaGiocatoriComponent {
     {immagine: "https://res.cloudinary.com/pley-gg/image/upload/c_fill,w_900/v1/players/afro_HEET_xvx5be", nUtente: "Afro", eta: "24", nazionalita: "Francese", ruolo: "AWPer", pagina: "https://liquipedia.net/counterstrike/Afro"},
     {immagine: "https://res.cloudinary.com/pley-gg/image/upload/c_fill,w_900/v1/players/Copyright_-_Helena-Kristiansson_-_bodyy_1_m9vmcb", nUtente: "Bodyy", eta: "27", nazionalita: "Francese", ruolo: "Support", pagina: "https://liquipedia.net/counterstrike/Bodyy"},
     {immagine: "https://api.yzone.sk/api/file/cc9ef2a9-7fc8-4ebe-8f06-2de0e6a72053.jpg", nUtente: "Matys", eta: "21", nazionalita: "Slovacco", ruolo: "Support", pagina: "https://liquipedia.net/counterstrike/Matys"},
-    {immagine: "https://res.cloudinary.com/pley-gg/image/upload/c_fill,w_900/v1/players/dexter_c4oyy5", nUtente: " Dexter", eta: "29", nazionalita: "Australiano", ruolo: "Coach", pagina: "https://liquipedia.net/counterstrike/Kyuubii"},
+    {immagine: "https://res.cloudinary.com/pley-gg/image/upload/c_fill,w_900/v1/players/dexter_c4oyy5", nUtente: " Dexter", eta: "29", nazionalita: "Australiano", ruolo: "Coach", pagina: "https://liquipedia.net/counterstrike/dexter"},
   ];
   openExternalPage(url: any) {
     location.href = url;
