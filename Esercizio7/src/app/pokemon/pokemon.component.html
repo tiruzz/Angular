@@ -4,7 +4,7 @@
             <div class="section">
                 <h1 class="nome" [ngClass]="{'rosso': element.colore=='rosso', 'verde': element.colore=='verde', 'blu': element.colore=='blu'}">{{element.nome}}</h1>
                 <img class="foto" [src]="element.immagine">
-                <a class="button">Statistiche</a>
+                <a class="button" [ngClass]="{'btnrosso': element.colore=='rosso', 'btnverde': element.colore=='verde', 'btnblu': element.colore=='blu'}">{{element.nome}}</a>
             </div>
         </div>
     </div>
@@ -16,7 +16,7 @@
             <div class="section">
                 <h1 class="nome" [ngClass]="{'rosso': element.colore=='rosso', 'verde': element.colore=='verde', 'blu': element.colore=='blu'}">{{element.nome}}</h1>
                 <img class="foto" [src]="element.immagine">
-                <a class="button">Statistiche</a>
+                <a class="button" [ngClass]="{'btnrosso': element.colore=='rosso', 'btnverde': element.colore=='verde', 'btnblu': element.colore=='blu'}">{{element.nome}}</a>
             </div>
         </div>
     </div>

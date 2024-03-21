@@ -9,6 +9,7 @@ import { Component } from '@angular/core';
   styleUrl: './pokemon.component.css'
 })
 export class PokemonComponent {
+  mostra: number = 0; 
   pokemon =[
     //prima generazione
     {immagine:"https://assets.pokemon.com/assets/cms2/img/pokedex/full/001.png", nome:"Bulbasaur",numero:"0001", colore: "verde", altezza:"0,7m ", categoria:"Seme", abilita:"Erbaiuto", peso:"6.9kg"},
