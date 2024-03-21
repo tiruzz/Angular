@@ -2,19 +2,19 @@
     <div *ngFor="let element of pokemon.slice(0, 3); let i = index">
         <div class="card-body">
             <div class="section">
-                <h1 class="nome">{{element.nome}}</h1>
+                <h1 class="nome" [ngClass]="{'rosso': element.colore=='rosso', 'verde': element.colore=='verde', 'blu': element.colore=='blu'}">{{element.nome}}</h1>
                 <img class="foto" [src]="element.immagine">
                 <a class="button">Statistiche</a>
             </div>
         </div>
     </div>
 </div>
-<h1>seconda generazione</h1>
+<h1 class="testo-pokemon">seconda generazione</h1>
 <div class="container">
     <div *ngFor="let element of pokemon.slice(3); let i = index">
         <div class="card-body">
             <div class="section">
-                <h1 class="nome">{{element.nome}}</h1>
+                <h1 class="nome" [ngClass]="{'rosso': element.colore=='rosso', 'verde': element.colore=='verde', 'blu': element.colore=='blu'}">{{element.nome}}</h1>
                 <img class="foto" [src]="element.immagine">
                 <a class="button">Statistiche</a>
             </div>
