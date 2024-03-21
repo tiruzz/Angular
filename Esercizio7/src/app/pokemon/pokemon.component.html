@@ -1,25 +1,23 @@
 <div class="container">
-    <div class="card-body">
-        <div class="section">
-            <h1 class="nome">Charmender</h1>
-            <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/004.png" alt="">
-            <a href="html/Negozio/chi_siamo.html" class="button">Statistiche</a>
+    <div *ngFor="let element of pokemon.slice(0, 3); let i = index">
+        <div class="card-body">
+            <div class="section">
+                <h1 class="nome">{{element.nome}}</h1>
+                <img class="foto" [src]="element.immagine">
+                <a class="button">Statistiche</a>
+            </div>
         </div>
     </div>
-
-    <div class="card-body">
-        <div class="section">
-            <h1 class="nome">Squirtle</h1>
-            <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/007.png" alt="">
-            <a href="html/Negozio/contatti.html" class="button">Statistiche</a>
-        </div>
-    </div>
-
-    <div class="card-body">
-        <div class="section">
-            <h1 class="nome">Bulbasaur</h1>
-            <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/001.png" alt="">
-            <a href="html/Negozio/sedi.html" class="button">Statistiche</a>
+</div>
+<h1>seconda generazione</h1>
+<div class="container">
+    <div *ngFor="let element of pokemon.slice(3); let i = index">
+        <div class="card-body">
+            <div class="section">
+                <h1 class="nome">{{element.nome}}</h1>
+                <img class="foto" [src]="element.immagine">
+                <a class="button">Statistiche</a>
+            </div>
         </div>
     </div>
 </div>
