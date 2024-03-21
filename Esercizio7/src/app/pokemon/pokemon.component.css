@@ -19,6 +19,8 @@ h1{
 
 .nome{
     font-size: 50px;
+    -webkit-text-stroke-width: 3px;
+    -webkit-text-stroke-color: black;
 }
 
 .card-body {
@@ -127,6 +129,8 @@ h1{
     display: flex;
     justify-content: center;
     padding: 25px;
+    -webkit-text-stroke-width: 5px;
+    -webkit-text-stroke-color: #2774ba;
 }
 
 .rosso{color: orange;}
