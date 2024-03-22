@@ -20,4 +20,9 @@ export class PokemonComponent {
     {immagine:"https://assets.pokemon.com/assets/cms2/img/pokedex/full/155.png", nome:"Cyndaquil",numero:"0155", colore: "rosso", altezza:"0,5 m", categoria:"Fuocotopo", abilita:"Aiutofuoco", peso:"7,9 kg"},
     {immagine:"https://assets.pokemon.com/assets/cms2/img/pokedex/full/158.png", nome:"Totodile",numero:"0158", colore: "blu", altezza:"0,6 m", categoria:"Mascellone", abilita:"Acquaiuto", peso:"9,5 kg"},
   ]
+  isCollapsed: { [key: string]: boolean } = {};
+
+  toggleCollapse(carta: string) {
+    this.isCollapsed[carta] = !this.isCollapsed[carta];
+  }
 }

@@ -5,9 +5,9 @@
             <div class="section">
                 <h1 class="nome" [ngClass]="{'rosso': element.colore=='rosso', 'verde': element.colore=='verde', 'blu': element.colore=='blu'}">{{element.nome}}</h1>
                 <img class="foto" [src]="element.immagine">
-                <button class="button" data-bs-toggle="collapse" data-bs-target="#carta1" [ngClass]="{'btnrosso': element.colore=='rosso', 'btnverde': element.colore=='verde', 'btnblu': element.colore=='blu'}">{{element.nome}}</button>
-                <div id="carta1" class="collapse">
-                    <a>aaaaaaaaaaaa</a>
+                <button class="button" (click)="toggleCollapse('carta1')">Apri/Nascondi</button><br>
+                <div *ngIf="isCollapsed['carta1']" class="statistiche">
+                    Funziona
                 </div>
             </div>
         </div>
