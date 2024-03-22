@@ -5,9 +5,13 @@
             <div class="section">
                 <h1 class="nome" [ngClass]="{'rosso': element.colore=='rosso', 'verde': element.colore=='verde', 'blu': element.colore=='blu'}">{{element.nome}}</h1>
                 <img class="foto" [src]="element.immagine">
-                <button class="button" (click)="toggleCollapse('carta1')">Apri/Nascondi</button><br>
-                <div *ngIf="isCollapsed['carta1']" class="statistiche">
-                    Funziona
+                <button class="button" (click)="toggleCollapse('carta1')" [ngClass]="{'btnrosso': element.colore=='rosso', 'btnverde': element.colore=='verde', 'btnblu': element.colore=='blu'}">Cliccami</button><br>
+                <div *ngIf="isCollapsed['carta1']" class="statistiche" [ngClass]="{'bgrosso': element.colore=='rosso', 'bgverde': element.colore=='verde', 'bgblu': element.colore=='blu'}">
+                    <p>#{{element.numero}}</p>
+                    <p>{{element.altezza}}</p>
+                    <p>{{element.categoria}}</p>
+                    <p>{{element.abilita}}</p>
+                    <p>{{element.peso}}</p>
                 </div>
             </div>
         </div>
@@ -18,7 +22,14 @@
             <div class="section">
                 <h1 class="nome" [ngClass]="{'rosso': element.colore=='rosso', 'verde': element.colore=='verde', 'blu': element.colore=='blu'}">{{element.nome}}</h1>
                 <img class="foto" [src]="element.immagine">
-                <button class="button" data-bs-toggle="collapse" data-bs-target="#carta2" [ngClass]="{'btnrosso': element.colore=='rosso', 'btnverde': element.colore=='verde', 'btnblu': element.colore=='blu'}">{{element.nome}}</button>
+                <button class="button" (click)="toggleCollapse('carta2')" [ngClass]="{'btnrosso': element.colore=='rosso', 'btnverde': element.colore=='verde', 'btnblu': element.colore=='blu'}">Cliccami</button><br>
+                <div *ngIf="isCollapsed['carta2']" class="statistiche" [ngClass]="{'bgrosso': element.colore=='rosso', 'bgverde': element.colore=='verde', 'bgblu': element.colore=='blu'}">
+                    <p>#{{element.numero}}</p>
+                    <p>{{element.altezza}}</p>
+                    <p>{{element.categoria}}</p>
+                    <p>{{element.abilita}}</p>
+                    <p>{{element.peso}}</p>
+                </div>
             </div>
         </div>
     </div>
@@ -28,7 +39,14 @@
             <div class="section">
                 <h1 class="nome" [ngClass]="{'rosso': element.colore=='rosso', 'verde': element.colore=='verde', 'blu': element.colore=='blu'}">{{element.nome}}</h1>
                 <img class="foto" [src]="element.immagine">
-                <button class="button" data-bs-toggle="collapse" data-bs-target="#carta3" [ngClass]="{'btnrosso': element.colore=='rosso', 'btnverde': element.colore=='verde', 'btnblu': element.colore=='blu'}">{{element.nome}}</button>
+                <button class="button" (click)="toggleCollapse('carta3')" [ngClass]="{'btnrosso': element.colore=='rosso', 'btnverde': element.colore=='verde', 'btnblu': element.colore=='blu'}">Cliccami</button><br>
+                <div *ngIf="isCollapsed['carta3']" class="statistiche" [ngClass]="{'bgrosso': element.colore=='rosso', 'bgverde': element.colore=='verde', 'bgblu': element.colore=='blu'}">
+                    <p>#{{element.numero}}</p>
+                    <p>{{element.altezza}}</p>
+                    <p>{{element.categoria}}</p>
+                    <p>{{element.abilita}}</p>
+                    <p>{{element.peso}}</p>
+                </div>
             </div>
         </div>
     </div>

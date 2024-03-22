@@ -64,7 +64,7 @@ h1{
     color: #EED5C2;
     text-align: center;
     padding: 100px 0;
-    background-color: #EDA4BD;
+    background-color: #ffffff;
 }
 
 .jumbotron h1 {
@@ -75,10 +75,12 @@ h1{
 .button {
     display: inline-block;
     padding: 10px 20px;
-    font-size: 1.2em;
+    font-size: 30px;
     text-decoration: none;
-    color: #000000;
-    background-color: #ffcc01;
+    font-family: 'PokemonFont';
+    color: #ffcc01;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #000000;
     border-radius: 10px; /* Angoli smussati */
 }
 
@@ -127,7 +129,6 @@ h1{
 .testo-pokemon {
     font-family: 'PokemonFont';
     color: #ffcc01;
-    border-color: #2774ba;
     font-size: 80px;
     display: flex;
     justify-content: center;
@@ -136,10 +137,28 @@ h1{
     -webkit-text-stroke-color: #2774ba;
 }
 
-.rosso{color: orange;}
-.verde{color: green;}
-.blu{color: lightblue;}
+.rosso{color: rgba(255, 166, 0);}
+.verde{color: rgba(0, 128, 0, 0.8);}
+.blu{color: rgba(87, 189, 223);}
 
 .btnrosso{background-color: orange;}
-.btnverde{background-color: green;}
-.btnblu{background-color: lightblue;}
+.btnverde{background-color: rgba(0, 128, 0, 0.8);}
+.btnblu{background-color: rgba(87, 189, 223);}
+.bgrosso{background-color: rgba(255, 166, 0, 0.6);}
+.bgverde{background-color: rgba(0, 128, 0, 0.6);}
+.bgblu{background-color: rgba(87, 189, 223, 0.6);}
+
+.statistiche{
+    text-align: center;
+    border-radius: 20px;
+    align-items: center;
+    margin: 20px;
+    justify-content: center;
+    padding: 10px;
+    font-size: 22px;
+    font-family: 'PokemonFont';
+    font-family: 'PokemonFont';
+    color: #ffcc01;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #000000;
+}
