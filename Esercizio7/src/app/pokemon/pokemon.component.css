@@ -11,6 +11,19 @@ h1{
     font-family: 'PokemonFont';
     border-color: #000000;
 }
+
+.card-body {
+    /* Stile base della carta */
+    transition: all 0.3s ease;
+}
+
+.selected {
+    /* Stile per la carta selezionata */
+    transform: scale(1.2); /* Ingrandisce la carta */
+    z-index: 1; /* Assicura che la carta selezionata sia sopra le altre */
+    /* Aggiungi altre proprietà CSS per posizionarla al centro */
+}
+
 .navbar {
     background-color: #ffcc01;
     padding: 15px;

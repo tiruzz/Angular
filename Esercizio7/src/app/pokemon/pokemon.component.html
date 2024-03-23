@@ -1,46 +1,12 @@
 <h1 class="testo-pokemon">Prima generazione</h1>
 <div class="container">
-    <div *ngFor="let element of pokemon.slice(0, 1); let i = index">
+    <div *ngFor="let element of pokemon.slice(0, 3); let i = index">
         <div class="card-body">
             <div class="section">
                 <h1 class="nome" [ngClass]="{'rosso': element.colore=='rosso', 'verde': element.colore=='verde', 'blu': element.colore=='blu'}">{{element.nome}}</h1>
                 <img class="foto" [src]="element.immagine">
-                <button class="button" (click)="toggleCollapse('carta1')" [ngClass]="{'btnrosso': element.colore=='rosso', 'btnverde': element.colore=='verde', 'btnblu': element.colore=='blu'}">Cliccami</button><br>
-                <div *ngIf="isCollapsed['carta1']" class="statistiche" [ngClass]="{'bgrosso': element.colore=='rosso', 'bgverde': element.colore=='verde', 'bgblu': element.colore=='blu'}">
-                    <p>#{{element.numero}}</p>
-                    <p>{{element.altezza}}</p>
-                    <p>{{element.categoria}}</p>
-                    <p>{{element.abilita}}</p>
-                    <p>{{element.peso}}</p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div *ngFor="let element of pokemon.slice(1, 2); let i = index">
-        <div class="card-body">
-            <div class="section">
-                <h1 class="nome" [ngClass]="{'rosso': element.colore=='rosso', 'verde': element.colore=='verde', 'blu': element.colore=='blu'}">{{element.nome}}</h1>
-                <img class="foto" [src]="element.immagine">
-                <button class="button" (click)="toggleCollapse('carta2')" [ngClass]="{'btnrosso': element.colore=='rosso', 'btnverde': element.colore=='verde', 'btnblu': element.colore=='blu'}">Cliccami</button><br>
-                <div *ngIf="isCollapsed['carta2']" class="statistiche" [ngClass]="{'bgrosso': element.colore=='rosso', 'bgverde': element.colore=='verde', 'bgblu': element.colore=='blu'}">
-                    <p>#{{element.numero}}</p>
-                    <p>{{element.altezza}}</p>
-                    <p>{{element.categoria}}</p>
-                    <p>{{element.abilita}}</p>
-                    <p>{{element.peso}}</p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div *ngFor="let element of pokemon.slice(2, 3); let i = index">
-        <div class="card-body">
-            <div class="section">
-                <h1 class="nome" [ngClass]="{'rosso': element.colore=='rosso', 'verde': element.colore=='verde', 'blu': element.colore=='blu'}">{{element.nome}}</h1>
-                <img class="foto" [src]="element.immagine">
-                <button class="button" (click)="toggleCollapse('carta3')" [ngClass]="{'btnrosso': element.colore=='rosso', 'btnverde': element.colore=='verde', 'btnblu': element.colore=='blu'}">Cliccami</button><br>
-                <div *ngIf="isCollapsed['carta3']" class="statistiche" [ngClass]="{'bgrosso': element.colore=='rosso', 'bgverde': element.colore=='verde', 'bgblu': element.colore=='blu'}">
+                <button class="button" (click)="toggleCollapse(element.nome)" [ngClass]="{'btnrosso': element.colore=='rosso', 'btnverde': element.colore=='verde', 'btnblu': element.colore=='blu'}">Cliccami</button><br>
+                <div *ngIf="isCollapsed[element.nome]" class="statistiche" [ngClass]="{'bgrosso': element.colore=='rosso', 'bgverde': element.colore=='verde', 'bgblu': element.colore=='blu'}">
                     <p>#{{element.numero}}</p>
                     <p>{{element.altezza}}</p>
                     <p>{{element.categoria}}</p>
@@ -55,32 +21,19 @@
 <h1 class="testo-pokemon">seconda generazione</h1>
 
 <div class="container">
-    <div *ngFor="let element of pokemon.slice(3, 4); let i = index">
+    <div *ngFor="let element of pokemon.slice(3, 6); let i = index">
         <div class="card-body">
             <div class="section">
                 <h1 class="nome" [ngClass]="{'rosso': element.colore=='rosso', 'verde': element.colore=='verde', 'blu': element.colore=='blu'}">{{element.nome}}</h1>
                 <img class="foto" [src]="element.immagine">
-                <button class="button" data-bs-toggle="collapse" data-bs-target="#carta4" [ngClass]="{'btnrosso': element.colore=='rosso', 'btnverde': element.colore=='verde', 'btnblu': element.colore=='blu'}">{{element.nome}}</button>
-            </div>
-        </div>
-    </div>
-
-    <div *ngFor="let element of pokemon.slice(4, 5); let i = index">
-        <div class="card-body">
-            <div class="section">
-                <h1 class="nome" [ngClass]="{'rosso': element.colore=='rosso', 'verde': element.colore=='verde', 'blu': element.colore=='blu'}">{{element.nome}}</h1>
-                <img class="foto" [src]="element.immagine">
-                <button class="button" data-bs-toggle="collapse" data-bs-target="#carta5" [ngClass]="{'btnrosso': element.colore=='rosso', 'btnverde': element.colore=='verde', 'btnblu': element.colore=='blu'}">{{element.nome}}</button>
-            </div>
-        </div>
-    </div>
-
-    <div *ngFor="let element of pokemon.slice(5, 6); let i = index">
-        <div class="card-body">
-            <div class="section">
-                <h1 class="nome" [ngClass]="{'rosso': element.colore=='rosso', 'verde': element.colore=='verde', 'blu': element.colore=='blu'}">{{element.nome}}</h1>
-                <img class="foto" [src]="element.immagine">
-                <button class="button" data-bs-toggle="collapse" data-bs-target="#carta6" [ngClass]="{'btnrosso': element.colore=='rosso', 'btnverde': element.colore=='verde', 'btnblu': element.colore=='blu'}">{{element.nome}}</button>
+                <button class="button" (click)="toggleCollapse(element.nome)" [ngClass]="{'btnrosso': element.colore=='rosso', 'btnverde': element.colore=='verde', 'btnblu': element.colore=='blu'}">Cliccami</button><br>
+                <div *ngIf="isCollapsed[element.nome]" class="statistiche" [ngClass]="{'bgrosso': element.colore=='rosso', 'bgverde': element.colore=='verde', 'bgblu': element.colore=='blu'}">
+                    <p>#{{element.numero}}</p>
+                    <p>{{element.altezza}}</p>
+                    <p>{{element.categoria}}</p>
+                    <p>{{element.abilita}}</p>
+                    <p>{{element.peso}}</p>
+                </div>
             </div>
         </div>
     </div>
