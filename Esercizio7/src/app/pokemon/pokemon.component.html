@@ -1,40 +1,93 @@
-<h1 class="testo-pokemon">Prima generazione</h1>
-<div class="container">
-    <div *ngFor="let element of pokemon.slice(0, 3); let i = index">
-        <div class="card-body">
-            <div class="section">
-                <h1 class="nome" [ngClass]="{'rosso': element.colore=='rosso', 'verde': element.colore=='verde', 'blu': element.colore=='blu'}">{{element.nome}}</h1>
-                <img class="foto" [src]="element.immagine">
-                <button class="button" (click)="toggleCollapse(element.nome)" [ngClass]="{'btnrosso': element.colore=='rosso', 'btnverde': element.colore=='verde', 'btnblu': element.colore=='blu'}">Cliccami</button><br>
-                <div *ngIf="isCollapsed[element.nome]" class="statistiche" [ngClass]="{'bgrosso': element.colore=='rosso', 'bgverde': element.colore=='verde', 'bgblu': element.colore=='blu'}">
-                    <p>#{{element.numero}}</p>
-                    <p>{{element.altezza}}</p>
-                    <p>{{element.categoria}}</p>
-                    <p>{{element.abilita}}</p>
-                    <p>{{element.peso}}</p>
+<ng-template *ngIf = "poke === 'start'; then bloccoElse"></ng-template>
+<ng-template #bloccoElse>
+   
+    <h1 class="testo-pokemon">Prima generazione</h1>
+    <div class="container">
+        <div *ngFor="let element of pokemon.slice(0, 3); let i = index">
+            <div class="card-body">
+                <div class="section">
+                    <h1 class="nome" [ngClass]="{'rosso': element.colore=='rosso', 'verde': element.colore=='verde', 'blu': element.colore=='blu'}">{{element.nome}}</h1>
+                    <img class="fotoMain" [src]="element.immagine">
+                    <button class="button" (click)="setTew(element.nome)" [ngClass]="{'btnrosso': element.colore=='rosso', 'btnverde': element.colore=='verde', 'btnblu': element.colore=='blu'}">Cliccami</button><br>
                 </div>
             </div>
         </div>
     </div>
-</div>
-
-<h1 class="testo-pokemon">seconda generazione</h1>
-
-<div class="container">
-    <div *ngFor="let element of pokemon.slice(3, 6); let i = index">
-        <div class="card-body">
-            <div class="section">
-                <h1 class="nome" [ngClass]="{'rosso': element.colore=='rosso', 'verde': element.colore=='verde', 'blu': element.colore=='blu'}">{{element.nome}}</h1>
-                <img class="foto" [src]="element.immagine">
-                <button class="button" (click)="toggleCollapse(element.nome)" [ngClass]="{'btnrosso': element.colore=='rosso', 'btnverde': element.colore=='verde', 'btnblu': element.colore=='blu'}">Cliccami</button><br>
-                <div *ngIf="isCollapsed[element.nome]" class="statistiche" [ngClass]="{'bgrosso': element.colore=='rosso', 'bgverde': element.colore=='verde', 'bgblu': element.colore=='blu'}">
-                    <p>#{{element.numero}}</p>
-                    <p>{{element.altezza}}</p>
-                    <p>{{element.categoria}}</p>
-                    <p>{{element.abilita}}</p>
-                    <p>{{element.peso}}</p>
+    
+    <h1 class="testo-pokemon">seconda generazione</h1>
+    
+    <div class="container">
+        <div *ngFor="let element of pokemon.slice(3, 6); let i = index">
+            <div class="card-body">
+                <div class="section">
+                    <h1 class="nome" [ngClass]="{'rosso': element.colore=='rosso', 'verde': element.colore=='verde', 'blu': element.colore=='blu'}">{{element.nome}}</h1>
+                    <img class="foto" [src]="element.immagine">
+                    
+                    <button class="button" (click)="toggleCollapse(element.nome)" [ngClass]="{'btnrosso': element.colore=='rosso', 'btnverde': element.colore=='verde', 'btnblu': element.colore=='blu'}">Cliccami</button><br>
+                   
                 </div>
             </div>
         </div>
     </div>
-</div>
+</ng-template>
+
+<ng-template *ngIf = "poke === 'Bulbasaur'; then bloccoTew"></ng-template>
+<ng-template #bloccoTew>
+    <div class="container"><br><br>
+        <div class="card-body">
+                <h1 class="titolo" [ngClass]="{'rosso': pokemon[0].colore=='rosso', 'verde': pokemon[0].colore=='verde', 'blu': pokemon[0].colore=='blu'}">{{pokemon[0].nome}}</h1>
+                <img class="foto" [src]="pokemon[0].immagine">
+                <div class="statistiche" [ngClass]="{'bgrosso': pokemon[0].colore=='rosso', 'bgverde': pokemon[0].colore=='verde', 'bgblu': pokemon[0].colore=='blu'}">
+                    <p>{{pokemon[0].numero}}</p>
+                    <p>{{pokemon[0].altezza}}</p>
+                    <p>{{pokemon[0].categoria}}</p>
+                    <p>{{pokemon[0].abilita}}</p>
+                    <p>{{pokemon[0].peso}}</p>
+                <div class="btnMappa">
+                    <button class="button">Cercami sulla mappa</button>
+                    <a class="button" href="reload()">Torna alla home</a>
+                </div>
+                
+        </div>
+    </div>
+</ng-template>
+<ng-template *ngIf = "poke === 'Charmander'; then Charmander"></ng-template>
+<ng-template #Charmander>
+    <div class="container">
+        <div>
+            <div class="card-body">
+                <div class="section">
+                    <h1 class="nome" [ngClass]="{'rosso': pokemon[1].colore=='rosso', 'verde': pokemon[1].colore=='verde', 'blu': pokemon[1].colore=='blu'}">{{pokemon[1].nome}}</h1>
+                    <img class="foto" [src]="pokemon[1].immagine">
+                    <div class="statistiche" [ngClass]="{'bgrosso': pokemon[1].colore=='rosso', 'bgverde': pokemon[1].colore=='verde', 'bgblu': pokemon[1].colore=='blu'}">
+                        <p>{{pokemon[1].numero}}</p>
+                        <p>{{pokemon[1].altezza}}</p>
+                        <p>{{pokemon[1].categoria}}</p>
+                        <p>{{pokemon[1].abilita}}</p>
+                        <p>{{pokemon[1].peso}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</ng-template>
+<ng-template *ngIf = "poke === 'Squirtle'; then Squirtle"></ng-template>
+<ng-template #Squirtle>
+    <div class="container">
+        <div>
+            <div class="card-body">
+                <div class="section">
+                    <h1 class="nome" [ngClass]="{'rosso': pokemon[2].colore=='rosso', 'verde': pokemon[2].colore=='verde', 'blu': pokemon[2].colore=='blu'}">{{pokemon[2].nome}}</h1>
+                    <img class="foto" [src]="pokemon[2].immagine">
+                    <div class="statistiche" [ngClass]="{'bgrosso': pokemon[2].colore=='rosso', 'bgverde': pokemon[2].colore=='verde', 'bgblu': pokemon[2].colore=='blu'}">
+                        <p>{{pokemon[2].numero}}</p>
+                        <p>{{pokemon[2].altezza}}</p>
+                        <p>{{pokemon[2].categoria}}</p>
+                        <p>{{pokemon[2].abilita}}</p>
+                        <p>{{pokemon[2].peso}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</ng-template>
