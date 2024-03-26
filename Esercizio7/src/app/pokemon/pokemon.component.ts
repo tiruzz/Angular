@@ -22,6 +22,15 @@ export class PokemonComponent {
     if(nome == "Squirtle" ) {
       this.poke = "Squirtle"
     }
+    if(nome == "Chikorita" ) {
+      this.poke = "Chikorita"
+    }
+    if(nome == "Cyndaquil" ) {
+      this.poke = "Cyndaquil"
+    }
+    if(nome == "Totodile" ) {
+      this.poke = "Totodile"
+    }
     
     
   }
