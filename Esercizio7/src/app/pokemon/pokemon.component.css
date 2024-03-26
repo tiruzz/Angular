@@ -28,18 +28,31 @@ h1{
     transform: scale(1.1);
 }
 
-.btnMappa{
+.divMappa{
     display: inline-block;
     padding: 10px 20px;
     font-size: 30px;
-    
     text-decoration: none;
     font-family: 'PokemonFont';
     color: #ffcc01;
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: #000000;
+    width: 99%;
     border-radius: 10px; /* Angoli smussati */
 }
+
+#destra{
+    float: right;
+}
+#sinistra{
+    float: left;
+}
+#centro{
+   justify-content: center;
+   align-items: center;
+   display: flex;
+}
+
 
 .card-body {
     /* Stile base della carta */
@@ -206,4 +219,17 @@ h1{
 }
 .lowdiv{
     justify-content: space-around; 
+}
+.mappa{
+    text-align: center;
+    float: right;
+    text-align: center;
+    font-size: 20px;
+    font-family: 'PokemonFont';
+    font-family: 'PokemonFont';
+    color: #ffcc01;
+    flex-direction: row; /* Carte in orizzontale*/
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #000000;
+    max-width: 500px;
 }
