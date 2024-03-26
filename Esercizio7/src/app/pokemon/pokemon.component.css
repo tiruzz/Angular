@@ -16,12 +16,11 @@ h1{
     scale: 0.9;
     transition: 0.3s;
     float: left;
+    margin-left: 30px;
 }
 .foto{
     scale: 0.9;
     transition: 0.3s;
-    float: left;
-    margin-left: 50px;
     width: 600px;
 }
 .foto:hover{
@@ -29,17 +28,6 @@ h1{
 }
 
 .divMappa{
-    display: inline-block;
-    padding: 10px 20px;
-    font-size: 30px;
-    text-decoration: none;
-    font-family: 'PokemonFont';
-    color: #ffcc01;
-    -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: #000000;
-    width: 99%;
-    border-radius: 10px; /* Angoli smussati */
-    display: flex;
     flex-direction: column;
 }
 
@@ -226,16 +214,17 @@ h1{
 .lowdiv{
     justify-content: space-around; 
 }
+
+
 .mappa{
     text-align: center;
-    float: right;
-    text-align: center;
-    font-size: 20px;
+    align-items: center;
+    border-radius: 15px;
+    font-size: 30px;
+    width: 500px;
     font-family: 'PokemonFont';
     font-family: 'PokemonFont';
     color: #ffcc01;
-    flex-direction: row; /* Carte in orizzontale*/
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: #000000;
-    max-width: 500px;
 }
