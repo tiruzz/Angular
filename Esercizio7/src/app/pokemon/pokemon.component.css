@@ -166,7 +166,7 @@ h1{
 }
 
 .card-body{
-    background-color: #EED5C2
+    background-color: #2773bad3;
 }
 
 
@@ -227,4 +227,22 @@ h1{
     color: #ffcc01;
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: #000000;
+}
+.back{
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 30px;
+    text-decoration: none;
+    font-family: 'PokemonFont';
+    color: #ffcc01;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #000000;
+}
+.sfondo{
+    background-image: url("https://steamuserimages-a.akamaihd.net/ugc/1469813569889500026/79499A1D2C041DB4CFF6D27D5F7A4FCC969C5E5F/?imw=637&imh=358&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=true");
+    background-size: cover;
+    height: 100%;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }

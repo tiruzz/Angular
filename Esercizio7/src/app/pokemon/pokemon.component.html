@@ -1,187 +1,189 @@
-<ng-template *ngIf = "poke === 'start'; then bloccoElse"></ng-template>
-<ng-template #bloccoElse>
-   
-    <h1 class="testo-pokemon">Prima generazione</h1>
-    <div class="container">
-        <div *ngFor="let element of pokemon.slice(0, 3); let i = index">
-            <div class="card-body">
-                <div class="section">
-                    <h1 class="nome" [ngClass]="{'rosso': element.colore=='rosso', 'verde': element.colore=='verde', 'blu': element.colore=='blu'}">{{element.nome}}</h1>
-                    <img class="fotoMain" [src]="element.immagine">
-                    <button class="button" (click)="setTew(element.nome)" [ngClass]="{'btnrosso': element.colore=='rosso', 'btnverde': element.colore=='verde', 'btnblu': element.colore=='blu'}">Cliccami</button><br>
+<div class="sfondo">
+    <ng-template *ngIf = "poke === 'start'; then bloccoElse"></ng-template>
+    <ng-template #bloccoElse>
+       
+        <h1 class="testo-pokemon">Prima generazione</h1>
+        <div class="container">
+            <div *ngFor="let element of pokemon.slice(0, 3); let i = index">
+                <div class="card-body">
+                    <div class="section">
+                        <h1 class="nome" [ngClass]="{'rosso': element.colore=='rosso', 'verde': element.colore=='verde', 'blu': element.colore=='blu'}">{{element.nome}}</h1>
+                        <img class="fotoMain" [src]="element.immagine">
+                        <button class="button" (click)="setTew(element.nome)" [ngClass]="{'btnrosso': element.colore=='rosso', 'btnverde': element.colore=='verde', 'btnblu': element.colore=='blu'}">Cliccami</button><br>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    
-    <h1 class="testo-pokemon">seconda generazione</h1>
-    
-    <div class="container">
-        <div *ngFor="let element of pokemon.slice(3, 6); let i = index">
-            <div class="card-body">
-                <div class="section">
-                    <h1 class="nome" [ngClass]="{'rosso': element.colore=='rosso', 'verde': element.colore=='verde', 'blu': element.colore=='blu'}">{{element.nome}}</h1>
-                    <img class="fotoMain" [src]="element.immagine">
-                    <button class="button" (click)="setTew(element.nome)" [ngClass]="{'btnrosso': element.colore=='rosso', 'btnverde': element.colore=='verde', 'btnblu': element.colore=='blu'}">Cliccami</button><br>
+        
+        <h1 class="testo-pokemon">seconda generazione</h1>
+        
+        <div class="container">
+            <div *ngFor="let element of pokemon.slice(3, 6); let i = index">
+                <div class="card-body">
+                    <div class="section">
+                        <h1 class="nome" [ngClass]="{'rosso': element.colore=='rosso', 'verde': element.colore=='verde', 'blu': element.colore=='blu'}">{{element.nome}}</h1>
+                        <img class="fotoMain" [src]="element.immagine">
+                        <button class="button" (click)="setTew(element.nome)" [ngClass]="{'btnrosso': element.colore=='rosso', 'btnverde': element.colore=='verde', 'btnblu': element.colore=='blu'}">Cliccami</button><br>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</ng-template>
-
-<ng-template *ngIf = "poke === 'Bulbasaur'; then bloccoTew"></ng-template>
-<ng-template #bloccoTew>
-    <div class="container"><br><br>
-        <div class="card-body">
-            <a class="button" id="sinistra" href="reload()">Torna alla home</a><br><br>
-                <h1 class="titolo" [ngClass]="{'rosso': pokemon[0].colore=='rosso', 'verde': pokemon[0].colore=='verde', 'blu': pokemon[0].colore=='blu'}">{{pokemon[0].nome}}</h1>
-                <img class="foto" [src]="pokemon[0].immagine">
-                <div class="statistiche" [ngClass]="{'bgrosso': pokemon[0].colore=='rosso', 'bgverde': pokemon[0].colore=='verde', 'bgblu': pokemon[0].colore=='blu'}">
-                    <p>{{pokemon[0].numero}}</p>
-                    <p>{{pokemon[0].altezza}}</p>
-                    <p>{{pokemon[0].categoria}}</p>
-                    <p>{{pokemon[0].abilita}}</p>
-                    <p>{{pokemon[0].peso}}</p>
-                </div><br>
-                <div class="divMappa" id="centro">
-                    <button class="button" id="centro" [ngClass]="{'btnrosso': pokemon[0].colore=='rosso', 'btnverde': pokemon[0].colore=='verde', 'btnblu': pokemon[0].colore=='blu'}" data-toggle="collapse" (click)="toggleCollapse('carta1')">Come trovarmi</button>
-                    <div *ngIf="isCollapsed['carta1']" id="sotto" class="mappa" ><br>
-                        <img class="mappa" src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQgiFQz8WTaVrE1OQ-0_0d0HOpTfXsaWXdLGKEAKR2YIijt4KDv"><br><br>
-                        <p>Bulbasaur si puo' scegliere come pokemon a inizio gioco. Se si opta per un altro pokemon si puo trovare sulla monataneve Anna.</p>
-                    </div>   
-                </div>           
+    </ng-template>
+    
+    <ng-template *ngIf = "poke === 'Bulbasaur'; then bloccoTew"></ng-template>
+    <ng-template #bloccoTew>
+        <div class="container">
+            <div class="card-body">
+                <a class="back" id="sinistra" href="reload()">Torna alla home</a>
+                    <h1 class="titolo" [ngClass]="{'rosso': pokemon[0].colore=='rosso', 'verde': pokemon[0].colore=='verde', 'blu': pokemon[0].colore=='blu'}">{{pokemon[0].nome}}</h1>
+                    <img class="foto" [src]="pokemon[0].immagine">
+                    <div class="statistiche" [ngClass]="{'bgrosso': pokemon[0].colore=='rosso', 'bgverde': pokemon[0].colore=='verde', 'bgblu': pokemon[0].colore=='blu'}">
+                        <p>{{pokemon[0].numero}}</p>
+                        <p>{{pokemon[0].altezza}}</p>
+                        <p>{{pokemon[0].categoria}}</p>
+                        <p>{{pokemon[0].abilita}}</p>
+                        <p>{{pokemon[0].peso}}</p>
+                    </div><br>
+                    <div class="divMappa" id="centro">
+                        <button class="button" id="centro" [ngClass]="{'btnrosso': pokemon[0].colore=='rosso', 'btnverde': pokemon[0].colore=='verde', 'btnblu': pokemon[0].colore=='blu'}" data-toggle="collapse" (click)="toggleCollapse('carta1')">Come trovarmi</button>
+                        <div *ngIf="isCollapsed['carta1']" id="sotto" class="mappa" ><br>
+                            <img class="mappa" src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQgiFQz8WTaVrE1OQ-0_0d0HOpTfXsaWXdLGKEAKR2YIijt4KDv"><br><br>
+                            <p>Bulbasaur si puo' scegliere come pokemon a inizio gioco. Se si opta per un altro pokemon si puo trovare sulla monataneve Anna.</p>
+                        </div>   
+                    </div>           
+            </div>
         </div>
-    </div>
-    <br><br>
-</ng-template>
-<ng-template *ngIf = "poke === 'Charmander'; then Charmander"></ng-template>
-<ng-template #Charmander>
-    <div class="container"><br><br>
-        <div class="card-body">
-            <a class="button" id="sinistra" href="reload()">Torna alla home</a><br><br>
-                <h1 class="titolo" [ngClass]="{'rosso': pokemon[1].colore=='rosso', 'verde': pokemon[1].colore=='verde', 'blu': pokemon[1].colore=='blu'}">{{pokemon[1].nome}}</h1>
-                <img class="foto" [src]="pokemon[1].immagine">
-                <div class="statistiche" [ngClass]="{'bgrosso': pokemon[1].colore=='rosso', 'bgverde': pokemon[1].colore=='verde', 'bgblu': pokemon[1].colore=='blu'}">
-                    <p>{{pokemon[1].numero}}</p>
-                    <p>{{pokemon[1].altezza}}</p>
-                    <p>{{pokemon[1].categoria}}</p>
-                    <p>{{pokemon[1].abilita}}</p>
-                    <p>{{pokemon[1].peso}}</p>
-                </div><br>
-                <div class="divMappa" id="centro">
-                    <button class="button" id="centro" [ngClass]="{'btnrosso': pokemon[1].colore=='rosso', 'btnverde': pokemon[1].colore=='verde', 'btnblu': pokemon[1].colore=='blu'}" data-toggle="collapse" (click)="toggleCollapse('carta2')">Come trovarmi</button>
-                    <br>
-                    <div *ngIf="isCollapsed['carta2']" id="sotto" class="mappa" ><br>
-                        <img class="mappa" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcToXt_K2h8zYu7OUphXWfFdEV9TRXrKZWCHT0DQhS2o1RKuFLHM"><br><br>
-                        <p>Charmander si puo' scegliere come pokemon a inizio gioco. Se si opta per un altro pokemon si puo trovare a Biancavalle.</p>
-                    </div>   
-                </div>           
+        <br><br>
+    </ng-template>
+    <ng-template *ngIf = "poke === 'Charmander'; then Charmander"></ng-template>
+    <ng-template #Charmander>
+        <div class="container"><br><br>
+            <div class="card-body">
+                <a class="button" id="sinistra" href="reload()">Torna alla home</a><br><br>
+                    <h1 class="titolo" [ngClass]="{'rosso': pokemon[1].colore=='rosso', 'verde': pokemon[1].colore=='verde', 'blu': pokemon[1].colore=='blu'}">{{pokemon[1].nome}}</h1>
+                    <img class="foto" [src]="pokemon[1].immagine">
+                    <div class="statistiche" [ngClass]="{'bgrosso': pokemon[1].colore=='rosso', 'bgverde': pokemon[1].colore=='verde', 'bgblu': pokemon[1].colore=='blu'}">
+                        <p>{{pokemon[1].numero}}</p>
+                        <p>{{pokemon[1].altezza}}</p>
+                        <p>{{pokemon[1].categoria}}</p>
+                        <p>{{pokemon[1].abilita}}</p>
+                        <p>{{pokemon[1].peso}}</p>
+                    </div><br>
+                    <div class="divMappa" id="centro">
+                        <button class="button" id="centro" [ngClass]="{'btnrosso': pokemon[1].colore=='rosso', 'btnverde': pokemon[1].colore=='verde', 'btnblu': pokemon[1].colore=='blu'}" data-toggle="collapse" (click)="toggleCollapse('carta2')">Come trovarmi</button>
+                        <br>
+                        <div *ngIf="isCollapsed['carta2']" id="sotto" class="mappa" ><br>
+                            <img class="mappa" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcToXt_K2h8zYu7OUphXWfFdEV9TRXrKZWCHT0DQhS2o1RKuFLHM"><br><br>
+                            <p>Charmander si puo' scegliere come pokemon a inizio gioco. Se si opta per un altro pokemon si puo trovare a Biancavalle.</p>
+                        </div>   
+                    </div>           
+            </div>
         </div>
-    </div>
-    <br><br>
-</ng-template>
-<ng-template *ngIf = "poke === 'Squirtle'; then Squirtle"></ng-template>
-<ng-template #Squirtle>
-    <div class="container"><br><br>
-        <div class="card-body">
-            <a class="button" id="sinistra" href="reload()">Torna alla home</a><br><br>
-                <h1 class="titolo" [ngClass]="{'rosso': pokemon[2].colore=='rosso', 'verde': pokemon[2].colore=='verde', 'blu': pokemon[2].colore=='blu'}">{{pokemon[2].nome}}</h1>
-                <img class="foto" [src]="pokemon[2].immagine">
-                <div class="statistiche" [ngClass]="{'bgrosso': pokemon[2].colore=='rosso', 'bgverde': pokemon[2].colore=='verde', 'bgblu': pokemon[2].colore=='blu'}">
-                    <p>{{pokemon[2].numero}}</p>
-                    <p>{{pokemon[2].altezza}}</p>
-                    <p>{{pokemon[2].categoria}}</p>
-                    <p>{{pokemon[2].abilita}}</p>
-                    <p>{{pokemon[2].peso}}</p>
-                </div><br>
-                <div class="divMappa" id="centro">
-                    <button class="button" id="centro" [ngClass]="{'btnrosso': pokemon[2].colore=='rosso', 'btnverde': pokemon[2].colore=='verde', 'btnblu': pokemon[2].colore=='blu'}" data-toggle="collapse" (click)="toggleCollapse('carta3')">Come trovarmi</button>
-                    <br>
-                    <div *ngIf="isCollapsed['carta3']" id="sotto" class="mappa" ><br>
-                        <img class="mappa" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQl54d7KvIirI_PqZ7Hh-7nH65xJXFke6JIxOgG8qKeaWnmSetj"><br><br>
-                        <p>Squirtle si puo' scegliere come pokemon a inizio gioco. Se si opta per un altro pokemon si puo trovare al labolatorio del professor Oak.</p>
-                    </div>   
-                </div>           
+        <br><br>
+    </ng-template>
+    <ng-template *ngIf = "poke === 'Squirtle'; then Squirtle"></ng-template>
+    <ng-template #Squirtle>
+        <div class="container"><br><br>
+            <div class="card-body">
+                <a class="button" id="sinistra" href="reload()">Torna alla home</a><br><br>
+                    <h1 class="titolo" [ngClass]="{'rosso': pokemon[2].colore=='rosso', 'verde': pokemon[2].colore=='verde', 'blu': pokemon[2].colore=='blu'}">{{pokemon[2].nome}}</h1>
+                    <img class="foto" [src]="pokemon[2].immagine">
+                    <div class="statistiche" [ngClass]="{'bgrosso': pokemon[2].colore=='rosso', 'bgverde': pokemon[2].colore=='verde', 'bgblu': pokemon[2].colore=='blu'}">
+                        <p>{{pokemon[2].numero}}</p>
+                        <p>{{pokemon[2].altezza}}</p>
+                        <p>{{pokemon[2].categoria}}</p>
+                        <p>{{pokemon[2].abilita}}</p>
+                        <p>{{pokemon[2].peso}}</p>
+                    </div><br>
+                    <div class="divMappa" id="centro">
+                        <button class="button" id="centro" [ngClass]="{'btnrosso': pokemon[2].colore=='rosso', 'btnverde': pokemon[2].colore=='verde', 'btnblu': pokemon[2].colore=='blu'}" data-toggle="collapse" (click)="toggleCollapse('carta3')">Come trovarmi</button>
+                        <br>
+                        <div *ngIf="isCollapsed['carta3']" id="sotto" class="mappa" ><br>
+                            <img class="mappa" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQl54d7KvIirI_PqZ7Hh-7nH65xJXFke6JIxOgG8qKeaWnmSetj"><br><br>
+                            <p>Squirtle si puo' scegliere come pokemon a inizio gioco. Se si opta per un altro pokemon si puo trovare al labolatorio del professor Oak.</p>
+                        </div>   
+                    </div>           
+            </div>
         </div>
-    </div>
-    <br><br>
-</ng-template>
-<!--seconda generazione-->
-<ng-template *ngIf = "poke === 'Chikorita'; then Chikorita"></ng-template>
-<ng-template #Chikorita>
-    <div class="container"><br><br>
-        <div class="card-body">
-            <a class="button" id="sinistra" href="reload()">Torna alla home</a><br><br>
-                <h1 class="titolo" [ngClass]="{'rosso': pokemon[3].colore=='rosso', 'verde': pokemon[3].colore=='verde', 'blu': pokemon[3].colore=='blu'}">{{pokemon[3].nome}}</h1>
-                <img class="foto" [src]="pokemon[3].immagine">
-                <div class="statistiche" [ngClass]="{'bgrosso': pokemon[3].colore=='rosso', 'bgverde': pokemon[3].colore=='verde', 'bgblu': pokemon[3].colore=='blu'}">
-                    <p>{{pokemon[3].numero}}</p>
-                    <p>{{pokemon[3].altezza}}</p>
-                    <p>{{pokemon[3].categoria}}</p>
-                    <p>{{pokemon[3].abilita}}</p>
-                    <p>{{pokemon[3].peso}}</p>
-                </div><br>
-                <div class="divMappa" id="centro">
-                    <button class="button" id="centro" [ngClass]="{'btnrosso': pokemon[3].colore=='rosso', 'btnverde': pokemon[3].colore=='verde', 'btnblu': pokemon[3].colore=='blu'}" data-toggle="collapse" (click)="toggleCollapse('carta4')">Come trovarmi</button>
-                    <br>
-                    <div *ngIf="isCollapsed['carta4']" id="sotto" class="mappa" ><br>
-                        <img class="mappa" src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTtQVl0XozXJrHf63CS0ZBCPBIJqUKYWpwYxtvXGivXbGXGzH88"><br><br>
-                        <p>Chikorita si puo' scegliere come pokemon a inizio gioco. Se si opta per un altro pokemon si puo trovare a Wakaba Town.</p>
-                    </div>   
-                </div>           
+        <br><br>
+    </ng-template>
+    <!--seconda generazione-->
+    <ng-template *ngIf = "poke === 'Chikorita'; then Chikorita"></ng-template>
+    <ng-template #Chikorita>
+        <div class="container"><br><br>
+            <div class="card-body">
+                <a class="button" id="sinistra" href="reload()">Torna alla home</a><br><br>
+                    <h1 class="titolo" [ngClass]="{'rosso': pokemon[3].colore=='rosso', 'verde': pokemon[3].colore=='verde', 'blu': pokemon[3].colore=='blu'}">{{pokemon[3].nome}}</h1>
+                    <img class="foto" [src]="pokemon[3].immagine">
+                    <div class="statistiche" [ngClass]="{'bgrosso': pokemon[3].colore=='rosso', 'bgverde': pokemon[3].colore=='verde', 'bgblu': pokemon[3].colore=='blu'}">
+                        <p>{{pokemon[3].numero}}</p>
+                        <p>{{pokemon[3].altezza}}</p>
+                        <p>{{pokemon[3].categoria}}</p>
+                        <p>{{pokemon[3].abilita}}</p>
+                        <p>{{pokemon[3].peso}}</p>
+                    </div><br>
+                    <div class="divMappa" id="centro">
+                        <button class="button" id="centro" [ngClass]="{'btnrosso': pokemon[3].colore=='rosso', 'btnverde': pokemon[3].colore=='verde', 'btnblu': pokemon[3].colore=='blu'}" data-toggle="collapse" (click)="toggleCollapse('carta4')">Come trovarmi</button>
+                        <br>
+                        <div *ngIf="isCollapsed['carta4']" id="sotto" class="mappa" ><br>
+                            <img class="mappa" src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTtQVl0XozXJrHf63CS0ZBCPBIJqUKYWpwYxtvXGivXbGXGzH88"><br><br>
+                            <p>Chikorita si puo' scegliere come pokemon a inizio gioco. Se si opta per un altro pokemon si puo trovare a Wakaba Town.</p>
+                        </div>   
+                    </div>           
+            </div>
         </div>
-    </div>
-    <br><br>
-</ng-template>
-<ng-template *ngIf = "poke === 'Cyndaquil'; then Cyndaquil"></ng-template>
-<ng-template #Cyndaquil>
-    <div class="container"><br><br>
-        <div class="card-body">
-            <a class="button" id="sinistra" href="reload()">Torna alla home</a><br><br>
-                <h1 class="titolo" [ngClass]="{'rosso': pokemon[4].colore=='rosso', 'verde': pokemon[4].colore=='verde', 'blu': pokemon[4].colore=='blu'}">{{pokemon[4].nome}}</h1>
-                <img class="foto" [src]="pokemon[4].immagine">
-                <div class="statistiche" [ngClass]="{'bgrosso': pokemon[4].colore=='rosso', 'bgverde': pokemon[4].colore=='verde', 'bgblu': pokemon[4].colore=='blu'}">
-                    <p>{{pokemon[4].numero}}</p>
-                    <p>{{pokemon[4].altezza}}</p>
-                    <p>{{pokemon[4].categoria}}</p>
-                    <p>{{pokemon[4].abilita}}</p>
-                    <p>{{pokemon[4].peso}}</p>
-                </div><br>
-                <div class="divMappa" id="centro">
-                    <button class="button" id="centro" [ngClass]="{'btnrosso': pokemon[4].colore=='rosso', 'btnverde': pokemon[4].colore=='verde', 'btnblu': pokemon[4].colore=='blu'}" data-toggle="collapse" (click)="toggleCollapse('carta5')">Come trovarmi</button>
-                    <br>
-                    <div *ngIf="isCollapsed['carta5']" id="sotto" class="mappa" ><br>
-                        <img class="mappa" src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRKxsxBRiYvcDHVxmM4CoNGq2wRk7b8MRryYUSIk5hMAUfgY_xz"><br><br>
-                        <p>Cyndaquil si puo' scegliere come pokemon a inizio gioco. Se si opta per un altro pokemon si puo trovare nel laboratorio del professor Elm.</p>
-                    </div>   
-                </div>           
+        <br><br>
+    </ng-template>
+    <ng-template *ngIf = "poke === 'Cyndaquil'; then Cyndaquil"></ng-template>
+    <ng-template #Cyndaquil>
+        <div class="container"><br><br>
+            <div class="card-body">
+                <a class="button" id="sinistra" href="reload()">Torna alla home</a><br><br>
+                    <h1 class="titolo" [ngClass]="{'rosso': pokemon[4].colore=='rosso', 'verde': pokemon[4].colore=='verde', 'blu': pokemon[4].colore=='blu'}">{{pokemon[4].nome}}</h1>
+                    <img class="foto" [src]="pokemon[4].immagine">
+                    <div class="statistiche" [ngClass]="{'bgrosso': pokemon[4].colore=='rosso', 'bgverde': pokemon[4].colore=='verde', 'bgblu': pokemon[4].colore=='blu'}">
+                        <p>{{pokemon[4].numero}}</p>
+                        <p>{{pokemon[4].altezza}}</p>
+                        <p>{{pokemon[4].categoria}}</p>
+                        <p>{{pokemon[4].abilita}}</p>
+                        <p>{{pokemon[4].peso}}</p>
+                    </div><br>
+                    <div class="divMappa" id="centro">
+                        <button class="button" id="centro" [ngClass]="{'btnrosso': pokemon[4].colore=='rosso', 'btnverde': pokemon[4].colore=='verde', 'btnblu': pokemon[4].colore=='blu'}" data-toggle="collapse" (click)="toggleCollapse('carta5')">Come trovarmi</button>
+                        <br>
+                        <div *ngIf="isCollapsed['carta5']" id="sotto" class="mappa" ><br>
+                            <img class="mappa" src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRKxsxBRiYvcDHVxmM4CoNGq2wRk7b8MRryYUSIk5hMAUfgY_xz"><br><br>
+                            <p>Cyndaquil si puo' scegliere come pokemon a inizio gioco. Se si opta per un altro pokemon si puo trovare nel laboratorio del professor Elm.</p>
+                        </div>   
+                    </div>           
+            </div>
         </div>
-    </div>
-    <br><br>
-</ng-template>
-<ng-template *ngIf = "poke === 'Totodile'; then Totodile"></ng-template>
-<ng-template #Totodile>
-    <div class="container"><br><br>
-        <div class="card-body">
-            <a class="button" id="sinistra" href="reload()">Torna alla home</a><br><br>
-                <h1 class="titolo" [ngClass]="{'rosso': pokemon[5].colore=='rosso', 'verde': pokemon[5].colore=='verde', 'blu': pokemon[5].colore=='blu'}">{{pokemon[5].nome}}</h1>
-                <img class="foto" [src]="pokemon[5].immagine">
-                <div class="statistiche" [ngClass]="{'bgrosso': pokemon[5].colore=='rosso', 'bgverde': pokemon[5].colore=='verde', 'bgblu': pokemon[5].colore=='blu'}">
-                    <p>{{pokemon[5].numero}}</p>
-                    <p>{{pokemon[5].altezza}}</p>
-                    <p>{{pokemon[5].categoria}}</p>
-                    <p>{{pokemon[5].abilita}}</p>
-                    <p>{{pokemon[5].peso}}</p>
-                </div><br>
-                <div class="divMappa" id="centro">
-                    <button class="button" id="centro" [ngClass]="{'btnrosso': pokemon[5].colore=='rosso', 'btnverde': pokemon[5].colore=='verde', 'btnblu': pokemon[5].colore=='blu'}" data-toggle="collapse" (click)="toggleCollapse('carta6')">Come trovarmi</button>
-                    <br>
-                    <div *ngIf="isCollapsed['carta6']" id="sotto" class="mappa" ><br>
-                        <img class="mappa" src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRMrC820IibgMTIczFrqneYRLmUrCUakF8ayljwE66ZPdcRoeG1"><br><br>
-                        <p>Totbile si puo' scegliere come pokemon a inizio gioco. Se si opta per un altro pokemon si puo trovare nell'accademia estiva.</p>
-                    </div>   
-                </div>           
+        <br><br>
+    </ng-template>
+    <ng-template *ngIf = "poke === 'Totodile'; then Totodile"></ng-template>
+    <ng-template #Totodile>
+        <div class="container"><br><br>
+            <div class="card-body">
+                <a class="button" id="sinistra" href="reload()">Torna alla home</a><br><br>
+                    <h1 class="titolo" [ngClass]="{'rosso': pokemon[5].colore=='rosso', 'verde': pokemon[5].colore=='verde', 'blu': pokemon[5].colore=='blu'}">{{pokemon[5].nome}}</h1>
+                    <img class="foto" [src]="pokemon[5].immagine">
+                    <div class="statistiche" [ngClass]="{'bgrosso': pokemon[5].colore=='rosso', 'bgverde': pokemon[5].colore=='verde', 'bgblu': pokemon[5].colore=='blu'}">
+                        <p>{{pokemon[5].numero}}</p>
+                        <p>{{pokemon[5].altezza}}</p>
+                        <p>{{pokemon[5].categoria}}</p>
+                        <p>{{pokemon[5].abilita}}</p>
+                        <p>{{pokemon[5].peso}}</p>
+                    </div><br>
+                    <div class="divMappa" id="centro">
+                        <button class="button" id="centro" [ngClass]="{'btnrosso': pokemon[5].colore=='rosso', 'btnverde': pokemon[5].colore=='verde', 'btnblu': pokemon[5].colore=='blu'}" data-toggle="collapse" (click)="toggleCollapse('carta6')">Come trovarmi</button>
+                        <br>
+                        <div *ngIf="isCollapsed['carta6']" id="sotto" class="mappa" ><br>
+                            <img class="mappa" src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRMrC820IibgMTIczFrqneYRLmUrCUakF8ayljwE66ZPdcRoeG1"><br><br>
+                            <p>Totbile si puo' scegliere come pokemon a inizio gioco. Se si opta per un altro pokemon si puo trovare nell'accademia estiva.</p>
+                        </div>   
+                    </div>           
+            </div>
         </div>
-    </div>
-    <br><br>
-</ng-template>
+        <br><br>
+    </ng-template>
+</div>
