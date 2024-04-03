@@ -1,0 +1,118 @@
+.sfondo{
+    /*background-image: url("https://www.fotonerd.it/wp-content/uploads/2020/09/fotonerd-timelapse-partenza-aereo-feat.jpg");
+    width: 100vw;
+    filter: brightness(0.4);*/
+}
+
+.titolo{
+    text-align: center;
+    margin-top: 20px;
+    color: #007bff;
+    font-weight: bold;
+}
+
+.inizio{
+    background-color: rgb(127, 237, 68);
+    padding: 50px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.card-body{
+    background-color: #4be3f1;
+    margin-left: 10px;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.content {
+    overflow: hidden; /* Clearfix per gestire il float */
+}
+
+.testoParigi {
+    float: left;
+    margin-top: 50px;
+    width: 60%; /* Imposta la larghezza del testo */
+}
+
+.fotoParigi {
+    float: right;
+    width: 40%; /* Imposta la larghezza dell'immagine */
+}
+
+.fotoParigi img {
+    width: 100%;
+    height: auto;
+}
+
+
+.testoLondra {
+    float: right;
+    margin-top: 50px;
+    width: 60%; /* Imposta la larghezza del testo */
+}
+.fotoLondra {
+    float: left;
+    width: 40%; /* Imposta la larghezza dell'immagine */
+}
+
+.fotoLondra img {
+    width: 100%;
+    height: auto;
+}
+
+.testoTokyo {
+    float: left;
+    margin-top: 50px;
+    width: 60%; /* Imposta la larghezza del testo */
+}
+.fotoTokyo {
+    float: left;
+    width: 40%; /* Imposta la larghezza dell'immagine */
+}
+
+.fotoTokyo img {
+    width: 100%;
+    height: auto;
+}
+
+.testoMilano {
+    float: right;
+    margin-top: 50px;
+    width: 60%; /* Imposta la larghezza del testo */
+}
+.fotoMilano {
+    float: left;
+    width: 40%; /* Imposta la larghezza dell'immagine */
+}
+
+.fotoMilano img {
+    width: 100%;
+    height: auto;
+}
+
+.testoNY {
+    float: left;
+    margin-top: 50px;
+    width: 60%; /* Imposta la larghezza del testo */
+}
+.fotoNY {
+    float: left;
+    width: 40%; /* Imposta la larghezza dell'immagine */
+}
+
+.fotoNY img {
+    width: 100%;
+    height: auto;
+}
