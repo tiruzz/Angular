@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Output } from '@angular/core';
+import { EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'navigation',
@@ -8,12 +9,15 @@ import { Component } from '@angular/core';
   styleUrl: './navigation.component.css'
 })
 export class NavigationComponent {
-  introduction = "home";
+  @Output() paginaEvento = new EventEmitter<string>();
+  pagina = "home";
 
-  setPaginaProdotti(){
-    this.introduction = "prodotti";
-  }
   setPaginaHome(){
-    this.introduction = "home";
+    this.pagina = "home";
+    this.paginaEvento.emit(this.pagina);
+  }
+  setPaginaProdotti(){
+    this.pagina = "biglietto";
+    this.paginaEvento.emit(this.pagina);
   }
 }
