@@ -1,0 +1,22 @@
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">  
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<nav class="navbar navbar-expand-lg navbar-light">
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <button class="btnHome bottone" (click)="setPaginaHome()">Home</button>
+        <button class="btnProdotti bottone" (click)="setPaginaProdotti()">Prodotti</button>    
+    </div>
+</nav><br>
+
+<ng-template *ngIf = "introduction === 'home'; then bloccoElse"></ng-template>
+    <ng-template #bloccoElse>
+        <h1 class="titolo">Panificio Luigi</h1>
+        <div class="foto">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/62/Rovigo%2C_panificio_Rubiero_1.JPG" alt="">
+        </div><br>
+        <introduction></introduction>
+    </ng-template>
+
+    <ng-template *ngIf = "introduction === 'prodotti'; then lista"></ng-template>
+    <ng-template #lista>
+        <list></list>
+    </ng-template>
