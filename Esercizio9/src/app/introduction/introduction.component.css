@@ -1,0 +1,10 @@
+.descrizione{
+    margin-right: 85px;
+    border-radius: 30px;
+    margin-left: 85px;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    padding: 15px;
+    background-color: rgba(57, 59, 234, 0.673);
+}

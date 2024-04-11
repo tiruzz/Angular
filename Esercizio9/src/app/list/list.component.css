@@ -14,17 +14,11 @@
     margin: 5px 0;
 }
 
-.arancione {
-    border-left: 5px solid orange;
+.prodotto img{
+    width: 170px;
+    float: right;
+    margin-bottom: 30px;
+    margin-right: 20px;
 }
 
-.giallo {
-    border-left: 5px solid yellow;
-}
 
-.immagine {
-    max-width: 100%;
-    max-height: 400px;
-    display: block;
-    margin: 10px auto;
-}

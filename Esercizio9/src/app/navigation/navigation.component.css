@@ -1,15 +1,25 @@
-.navbar {
-    background-color: #7C606B;
-    padding: 15px;
-    text-align: center;
+.navbar-nav{
+    border-radius: 10px;
+    background-color: rgb(229, 227, 227);
+    margin-right: 10px
 }
 
-.navbar a {
-    color: white;
-    text-decoration: none;
-    margin: 0 15px;
+.navbar{
+    background-color: lightgray;
 }
 
-.navbar-link {
-    margin-right: 2px;
+button{
+    margin: 0px 5px;
+    /*background-color: rgb(240, 240, 240);*/
+    padding: 10px;
+    border-radius: 10px;
+    color: grey;
+}
+
+.nav-link:hover {
+    font-size: 1.2em;
+    color: black; 
+}
+.nav-link {
+    transition: all 0.3s ease;
 }
