@@ -1,5 +1,7 @@
 <div class="sfondo">
-    <img src="https://media-assets.wired.it/photos/6512a7c0e5927092b4084e58/16:9/w_2560%2Cc_limit/1253695434" alt="sfondo">
+    <video id="background-video" autoplay loop muted >
+        <source src="../assets/Terra ｜ Universo ｜ Spazio 4K Full HD.mp4" type="video/mp4">
+    </video>
     <navigation (paginaEvento)="paginaNavbar($event)"></navigation>
 
     <ng-template *ngIf = "pagina == 'biglietto'; then bloccoBiglietto"></ng-template>
@@ -17,6 +19,4 @@
 
 
 
-<!--<video id="background-video" autoplay loop muted >
-  <source src="../assets/Galaxy in 4K ║ Animation Overlay for Edits ║ Motion Background Free Beautiful HD Video Effect.mp4" type="video/mp4">
-</video>-->
+

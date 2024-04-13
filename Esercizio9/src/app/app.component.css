@@ -10,13 +10,12 @@
     font-family: 'NasaFont';
 }
 
-.sfondo img{
+.sfondo video{
     position: fixed;
-    filter: brightness(15%);
+    filter: brightness(30%);
     height: 100%;
     z-index: -1;
 }
-
 @font-face {
     font-family: 'NasaFont';
     src: url('../assets/nasalization-rg.otf') format('truetype');
