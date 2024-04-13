@@ -1,17 +1,23 @@
 .prodotto {
-    background-color: #fff;
+    background-color: black;
+    color: white;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     padding: 20px;
+    border-radius: 25px;
     margin-bottom: 20px;
+    border-color: white;
 }
 
 .prodotto h2 {
-    margin-top: 0;
+    font-family: 'Nasafont';
+    text-shadow: 0 0 0.2em #255bee, 0 0 0.3em #236aef;
 }
 
 .prodotto p {
     margin: 5px 0;
+    font-size: large;
+    font-family: 'Nasafont';
 }
 
 .prodotto img{

@@ -1,10 +1,49 @@
-.descrizione{
-    margin-right: 85px;
-    border-radius: 30px;
-    margin-left: 85px;
-    font-size: 30px;
-    font-weight: bold;
+@font-face {
+    font-family: 'NasaFont';
+    src: url('../../assets/nasalization-rg.otf') format('truetype');
+}
+
+span{
+    text-shadow: 0 0 0.2em #255bee, 0 0 0.3em #236aef;
+}
+
+.testo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     text-align: center;
-    padding: 15px;
-    background-color: rgba(57, 59, 234, 0.673);
+    color: white;
+    font-family: 'NasaFont';
+}
+
+.testo h1 {
+    font-size: 50px;
+    margin-bottom: 20px;
+    font-family: 'NasaFont';
+
+}
+
+.testo p {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    font-family: 'NasaFont';
+}
+
+.btn {
+    background-color: black;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    font-family: 'NasaFont';
+
+}
+
+.btn:hover {
+    background-color: grey;
 }

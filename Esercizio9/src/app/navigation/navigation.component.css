@@ -5,21 +5,41 @@
 }
 
 .navbar{
-    background-color: lightgray;
+    background-color: black;
+}
+
+p{
+    font-family: 'NasaFont';
+    color: white;
+    margin-top: 10px;
+    margin-left: 5px;
+    font-size: 25px;
 }
 
 button{
     margin: 0px 5px;
+    font-size: 20px;
     /*background-color: rgb(240, 240, 240);*/
     padding: 10px;
     border-radius: 10px;
     color: grey;
+    justify-content: center;
+    display: flex;
+    font-family: 'NasaFont';
 }
 
+.bottoni{
+    margin-right: 150px;
+}
 .nav-link:hover {
-    font-size: 1.2em;
-    color: black; 
+    font-size: 1.5em;
+    color: white; 
 }
 .nav-link {
     transition: all 0.3s ease;
+}
+
+@font-face {
+    font-family: 'NasaFont';
+    src: url('../../assets/nasalization-rg.otf') format('truetype');
 }
