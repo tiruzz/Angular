@@ -7,12 +7,13 @@
                     <img class="postcard__img" src={{element.immagine}} alt="Image Title" />
                 </a>
                 <div class="postcard__text t-dark">
-                    <h1 class="postcard__title blue"><a id="i" (click)="metodoCambio(i)">{{element.nome}}</a></h1>
+                    <h1 class="postcard__title blue"><a id="i" (click)="metodoCambio(i)">{{element.nome |titlecase}}</a></h1>
+                    <h1><a >{{element.artisti |titlecase}}</a></h1>
                     <div class="postcard__subtitle">
                         <p>Inizio: {{element.inizio |date }}, Fine: {{element.fine |date}}</p> 
                     </div>
                     <div class="postcard__bar"></div>
-                    <div class="postcard__preview-txt">{{element.descrizione}}</div>
+                    <div class="postcard__preview-txt">{{element.descrizione |titlecase}}</div>
                 </div>
             </article>
         </div>
