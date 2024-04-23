@@ -1,0 +1,42 @@
+@font-face {
+    font-family: 'MuseoFont';
+    src: url('../../assets/Classico_PersonalUseOnly.ttf') format('truetype');
+  }
+@font-face {
+    font-family: 'FontBello';
+    src: url('../../assets/FugazOne-Regular.ttf') format('truetype');
+}
+.mostra-container {
+    background-color: #f9f9f9; 
+    border: 1px solid #ddd;
+    border-radius: 8px; 
+    padding-left: 100px; 
+    padding-right: 100px; 
+    justify-content: center;
+    margin-left: 85px;
+    margin-right: 85px;
+}
+
+.mostra-container p:first-child {
+    font-size: 75px; 
+    color: #333; 
+    text-align: center;
+    margin-left: 35px;
+    font-family: 'MuseoFont';
+}
+
+.mostra-container img {
+    max-width: 100%;
+    border-radius: 8px; 
+    margin: 20px 20px; 
+    margin-left: 27.5%;
+    width: 650px;
+}
+
+.mostra-container p:last-child {
+    font-size: 25px; 
+    color: #666;
+    line-height: 1.5;
+    text-align: center;
+    font-family: 'FontBello';
+}

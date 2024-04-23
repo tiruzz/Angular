@@ -1,0 +1,19 @@
+<link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+<body>
+  <div class="logo">
+    <img src="../assets/logo museo.jpeg" alt="logo">
+  </div>
+  <input type="checkbox" id="active">
+  <label for="active" class="menu-btn"><span></span></label>
+  <label for="active" class="close"></label>
+  <div class="wrapper">
+    <ul>
+      <li><a routerLink="/Home">Home</a></li>
+      <li><a routerLink="/Mostre">Mostre</a></li>
+    </ul>
+  </div>
+  <div class="linea"></div><br>
+    <router-outlet></router-outlet>
+</body>

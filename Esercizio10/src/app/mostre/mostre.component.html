@@ -1,0 +1,20 @@
+<div class="h1 text-center" id="pageHeaderTitle">Le nostre mostre</div>
+<div *ngFor="let element of Opere.mostre; let i = index">
+    <section class="light">
+        <div class="container py-2">
+            <article class="postcard light blue" id="i" (click)="metodoCambio(i)">
+                <a class="postcard__img_link" id="i" (click)="metodoCambio(i)">
+                    <img class="postcard__img" src={{element.immagine}} alt="Image Title" />
+                </a>
+                <div class="postcard__text t-dark">
+                    <h1 class="postcard__title blue"><a id="i" (click)="metodoCambio(i)">{{element.nome}}</a></h1>
+                    <div class="postcard__subtitle">
+                        <p>Inizio: {{element.inizio |date }}, Fine: {{element.fine |date}}</p> 
+                    </div>
+                    <div class="postcard__bar"></div>
+                    <div class="postcard__preview-txt">{{element.descrizione}}</div>
+                </div>
+            </article>
+        </div>
+    </section>
+</div>
